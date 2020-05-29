@@ -172,7 +172,7 @@ func main() {
 	http.HandleFunc("/users", getusers)
 	dir, _ := os.Getwd()
 	println(dir)
-	http.Handle("/js/", http.StripPrefix("/js", http.FileServer(http.Dir("./public"))))
+	//http.Handle("/js/", http.StripPrefix("/js", http.FileServer(http.Dir("./public"))))
 	http.Handle("/", http.FileServer(http.Dir("./WebAssembly")))
 	port := getopt.StringLong("port", 'p', "", "Portnumber")
 	ip := getopt.StringLong("ip", 'i', "", "IP Adress")
